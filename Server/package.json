@@ -1,5 +1,5 @@
 {
-  "name": "APMC Yard Cloud Env",
+  "name": "apmc-yard-cloud",
   "version": "1.0.0",
   "description": "Cloud Data Store/Sync for APMC Yard apps",
   "scripts": {
