@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 // var passport = require('passport');
-// var index = require('./api/routes/index/index');
+var index = require('./api/index');
 var authAPI = require('./api/auth_api');
 // var users = require('./api/routes/users/users');
 var config = require('./config/config');
@@ -34,7 +34,7 @@ mongoose.connect(config.mongoDbUrl);
 
 // require('./config/passport')(passport);
 
-// app.use('/', index);
+app.use('/', index);
 app.use('/apmc/api', authAPI);
 // app.use('/api/users', users);
 
