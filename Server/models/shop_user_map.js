@@ -38,6 +38,16 @@ module.exports.getShopUserMap = function(id,callback) {
   ShopUser.findOne({ _id: id },callback);
 }
 
+module.exports.getUserShopMatch = function(userId,shopId,callback) {
+  ShopUser.findOne({ user_id: userId, shop_id : shopId },function(err,user) {
+    if(err || !user) {
+      callback(err,false);
+    } else {
+      callback(null,true);
+    }
+  });
+}
+
 module.exports.getAllShopUserMaps = function(callback) {
   ShopUser.find({},callback);
 }
